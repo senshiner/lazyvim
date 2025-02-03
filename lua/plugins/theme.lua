@@ -1,19 +1,19 @@
 return {
   -- Tambahkan tema populer
-  { "folke/tokyonight.nvim" },
-  { "rebelot/kanagawa.nvim" },
-  { "catppuccin/nvim", name = "catppuccin" },
-  { "ellisonleao/gruvbox.nvim" },
-  { "sainnhe/everforest" },
+  --{ "folke/tokyonight.nvim" },
+  --{ "rebelot/kanagawa.nvim" },
+  --{ "catppuccin/nvim", name = "catppuccin" },
+  --{ "ellisonleao/gruvbox.nvim" },
+  --{ "sainnhe/everforest" },
   { "EdenEast/nightfox.nvim" },
-  { "mhartington/oceanic-next" },
-  { "sainnhe/sonokai" },
-  { "tanvirtin/monokai.nvim" },
-  { "glepnir/zephyr-nvim" },
-  { "Mofiqul/dracula.nvim" },
-  { "marko-cerovac/material.nvim" },
-  { "shaunsingh/nord.nvim" },
-  { "nxstynate/oneDarkPro.nvim" },
+  --{ "mhartington/oceanic-next" },
+  --{ "sainnhe/sonokai" },
+  --{ "tanvirtin/monokai.nvim" },
+  --{ "glepnir/zephyr-nvim" },
+  --{ "Mofiqul/dracula.nvim" },
+  --{ "marko-cerovac/material.nvim" },
+  --{ "shaunsingh/nord.nvim" },
+  --{ "nxstynate/oneDarkPro.nvim" },
 
   -- Konfigurasi LazyVim untuk memuat tema
   {
