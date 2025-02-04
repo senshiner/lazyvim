@@ -19,10 +19,10 @@ require("lazy").setup({
     {
       "LazyVim/LazyVim",
       import = "lazyvim.plugins",
-      -- Tambahkan extras di sini
+      -- Tambahkan extras plugins di sini
       opts = {
         extras = {
-          formatting = { "prettier" } -- <-- Tambahkan ini
+          formatting = { "prettier" }
         }
       }
     },
