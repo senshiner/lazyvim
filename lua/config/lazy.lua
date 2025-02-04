@@ -16,10 +16,17 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
   spec = {
-    -- Tambahkan LazyVim dan impor plugin-nya
-    { "LazyVim/LazyVim", import = "lazyvim.plugins" },
-    -- Impor/override dengan plugin kustom Anda
-    { import = "plugins" }, -- Ini akan mengimpor file `plugins/`
+    {
+      "LazyVim/LazyVim",
+      import = "lazyvim.plugins",
+      -- Tambahkan extras di sini
+      opts = {
+        extras = {
+          formatting = { "prettier" } -- <-- Tambahkan ini
+        }
+      }
+    },
+    { import = "plugins" },
   },
   defaults = {
     -- Secara default, hanya plugin LazyVim yang akan di-load secara lazy.
