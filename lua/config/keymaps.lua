@@ -26,13 +26,15 @@ vim.keymap.set({ "n", "i" }, "<C-S-k>", "<cmd>normal! dd<cr>", { desc = "Delete 
 vim.keymap.set("n", "<C-t>", "<cmd>ToggleTerm<cr>", { desc = "Toggle Terminal" })
 
 -- 6. Text Selection (Shift + Arrows)
-vim.keymap.set({ "n", "i", "v" }, "<S-Left>", "<S-Left>", { desc = "Select left" })
-vim.keymap.set({ "n", "i", "v" }, "<S-Right>", "<S-Right>", { desc = "Select right" })
-vim.keymap.set({ "n", "i", "v" }, "<S-Up>", "<S-Up>", { desc = "Select up" })
-vim.keymap.set({ "n", "i", "v" }, "<S-Down>", "<S-Down>", { desc = "Select down" })
+-- Map to Visual mode explicitly for all directions
+vim.keymap.set({ "n", "i", "v" }, "<S-Left>", "<ESC>v<Left>", { desc = "Select left" })
+vim.keymap.set({ "n", "i", "v" }, "<S-Right>", "<ESC>v<Right>", { desc = "Select right" })
+vim.keymap.set({ "n", "i", "v" }, "<S-Up>", "<ESC>v<Up>", { desc = "Select up" })
+vim.keymap.set({ "n", "i", "v" }, "<S-Down>", "<ESC>v<Down>", { desc = "Select down" })
 
 -- 7. Select All
-vim.keymap.set({ "n", "i", "v" }, "<C-a>", "<Esc>ggVG", { desc = "Select all" })
+-- Ensure it forces Visual mode
+vim.keymap.set({ "n", "i", "v" }, "<C-a>", "<ESC>ggVG", { desc = "Select all" })
 
 -- Extras: Save/Close/Comment/Pane Nav
 vim.keymap.set({ "n", "i", "v" }, "<C-s>", "<cmd>w<cr><esc>", { desc = "Save file" })
