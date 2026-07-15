@@ -22,8 +22,17 @@ vim.keymap.set("v", "<A-Down>", ":m '>+1<cr>gv=gv", { desc = "Move line down" })
 -- 4. Delete Line
 vim.keymap.set({ "n", "i" }, "<C-S-k>", "<cmd>normal! dd<cr>", { desc = "Delete line" })
 
--- 5. Toggle Terminal
-vim.keymap.set({ "n", "t" }, "<C-t>", "<cmd>ToggleTerm<cr>", { desc = "Toggle Terminal" })
+-- 5. Toggle Terminal (Normal mode only)
+vim.keymap.set("n", "<C-t>", "<cmd>ToggleTerm<cr>", { desc = "Toggle Terminal" })
+
+-- 6. Text Selection (Shift + Arrows)
+vim.keymap.set({ "n", "i", "v" }, "<S-Left>", "<S-Left>", { desc = "Select left" })
+vim.keymap.set({ "n", "i", "v" }, "<S-Right>", "<S-Right>", { desc = "Select right" })
+vim.keymap.set({ "n", "i", "v" }, "<S-Up>", "<S-Up>", { desc = "Select up" })
+vim.keymap.set({ "n", "i", "v" }, "<S-Down>", "<S-Down>", { desc = "Select down" })
+
+-- 7. Select All
+vim.keymap.set({ "n", "i", "v" }, "<C-a>", "<Esc>ggVG", { desc = "Select all" })
 
 -- Extras: Save/Close/Comment/Pane Nav
 vim.keymap.set({ "n", "i", "v" }, "<C-s>", "<cmd>w<cr><esc>", { desc = "Save file" })
